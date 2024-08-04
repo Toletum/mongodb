@@ -3,12 +3,31 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-headless
+  labels:
+    app: mongodb
 spec:
-  clusterIP: None
+  type: ClusterIP
+  clusterIP: None  # Servicio headless
   selector:
     app: mongodb
   ports:
     - port: 27017
+      targetPort: 27017
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-clusterip
+  labels:
+    app: mongodb
+spec:
+  type: ClusterIP
+  selector:
+    app: mongodb
+  ports:
+    - port: 27017
+      targetPort: 27017
 
 ---
 apiVersion: apps/v1
