@@ -33,14 +33,14 @@ rs.initiate({
     { _id: 1, host: "mongodb-1.mongodb-headless:27017" },
     { _id: 2, host: "mongodb-2.mongodb-headless:27017" }
   ]
-})
+});
 
-use admin
+use admin;
 db.createUser({
   user: "dbadmin",
   pwd: "dbpassword",
   roles: [ { role: "root", db: "admin" } ]
-})
+});
 ```
 
 ```bash
