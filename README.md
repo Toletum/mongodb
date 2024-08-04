@@ -43,4 +43,8 @@ db.createUser({
 })
 ```
 
+```bash
+kubectl exec -it mongodb-0 -- mongosh -u dbadmin -p dbpassword
+```
+
 
