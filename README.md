@@ -51,3 +51,14 @@ kubectl exec -it mongodb-0 -- mongosh "mongodb://dbadmin:dbpassword@localhost:27
 ```javascript
 rs.status()
 ```
+
+## Mongo-Express
+```bash
+kubectl apply -f mongo-express-deployment.yml
+```
+
+
+```bash
+curl http://192.168.49.2:30081/
+```
+
