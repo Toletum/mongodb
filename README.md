@@ -44,7 +44,7 @@ db.createUser({
 ```
 
 ```bash
-kubectl exec -it mongodb-0 -- mongosh -u dbadmin -p dbpassword
+kubectl exec -it mongodb-0 -- mongosh "mongodb://dbadmin:dbpassword@localhost:27017/admin?replicaSet=rs0
 ```
 
 
