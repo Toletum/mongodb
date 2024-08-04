@@ -47,4 +47,13 @@ db.createUser({
 kubectl exec -it mongodb-0 -- mongosh "mongodb://dbadmin:dbpassword@localhost:27017/admin?replicaSet=rs0
 ```
 
+## ReplicaSet status
+```javascript
+rs.status()
+```
+
+## Port-forward
+```bash
+kubectl port-forward svc/mongodb-headless 27017:27017
+```
 
