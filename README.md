@@ -51,9 +51,3 @@ kubectl exec -it mongodb-0 -- mongosh "mongodb://dbadmin:dbpassword@localhost:27
 ```javascript
 rs.status()
 ```
-
-## Port-forward
-```bash
-kubectl port-forward svc/mongodb-headless 27017:27017
-```
-
